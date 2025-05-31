@@ -9,12 +9,6 @@
     <h2>Employee List</h2>
     <div id="employeeList"></div>
 
-    <script type="module" src="/src/employee.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-            const employees = await fetchEmployees();
-            document.getElementById('employeeList').innerHTML = employees.map(emp => `<p>${emp.name} - ${emp.jobTitle}</p>`).join('');
-        });
-    </script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
