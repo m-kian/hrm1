@@ -11,6 +11,8 @@ export async function generateMonthlyRanking() {
     return data;
 }
 
+import { supabase } from '../src/supabase.js';
+
 export async function fetchTopEmployees() {
     const { data, error } = await supabase.from('rankings').select('*').order('score', { ascending: false });
 
