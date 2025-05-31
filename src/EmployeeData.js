@@ -1,4 +1,4 @@
-Employee Data Handling (src/employee.js)**
+
 import { supabase } from '../supabase.js';
 
 export async function fetchEmployees() {
