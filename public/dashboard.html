@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HRMS Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="employeeList"></div>
+
+    <script src="src/employee.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const employees = await fetchEmployees();
+            const employeeList = document.getElementById('employeeList');
+            employeeList.innerHTML = employees.map(emp => `<p>${emp.name} - ${emp.jobTitle}</p>`).join('');
+        });
+    </script>
+</body>
+</html>
+
